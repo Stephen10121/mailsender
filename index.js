@@ -40,10 +40,13 @@ async function sendForm(from, name, about) {
 
 app.post('/sendMail', async (req, res) => {
     if (!req.body["from"] || !req.body["name"] || !req.body["about"] || !req.body["password"]) {
+        console.log(req.body);
+        console.log("Missing params");
         res.json({ sent: false });
         return
     }
     if (req.body.password !== process.env.PASSWORD) {
+        console.log("bad password");
         res.json({sent: false});
         return
     }
