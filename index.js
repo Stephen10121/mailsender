@@ -25,8 +25,9 @@ async function sendForm(from, name, about) {
             to: "lbrandon10121@gmail.com",
             subject: `Message from ${name}`,
             html: `
-                <h1>${from}</h1>
-                <p>${about}</p>
+                <pre>Message from: ${from}.
+                Name: ${name}.
+                About: ${about}.</pre>
             `
         });
     } catch (err) {
