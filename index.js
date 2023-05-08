@@ -22,7 +22,7 @@ async function sendForm(from, name, about) {
     try {
         info = await transporter.sendMail({
             from: "Local Fence Co Email <test@thelocalfenceco.com>",
-            to: "lbrandon10121@gmail.com",
+            to: process.env.EMAIL_TO,
             subject: `Message from ${name}`,
             html: `
                 <pre>Message from: ${from}.
