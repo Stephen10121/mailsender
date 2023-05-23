@@ -51,6 +51,7 @@ app.post('/sendMail', async (req, res) => {
         res.json({sent: false});
         return
     }
+    console.log("sending something");
     res.json({sent: await sendForm(req.body.from, req.body.name, req.body.about)})
 })
 

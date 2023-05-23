@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "Mail Sender.",
+            "script": "npm",
+            "args" : "start"
+        }
+    ]
+}
